@@ -108,7 +108,7 @@ These are the list technical specification of stateless gherkin.
 
 ## Java Implementation
 
-TODO 
+We are going to use Junit 5 feature such as Dynamic content and Custom Runner to implement this in Java. 
 
 
 ## Reference
