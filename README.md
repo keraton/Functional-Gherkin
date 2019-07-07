@@ -8,6 +8,7 @@ A good BDD implementation should let the user to reuse and to compose of sets Gh
 But the reality is that most of the time the notion of state is hidden from the specification.
 For example, given a Gherkin scenario :
 
+```
 Scenario: Search Business Flight
 
 Given search of a flight from "PARIS" to "NEW YORK"
@@ -15,7 +16,7 @@ And filter with "BUSINESS" class
 When search is executed
 Then return flights from "PARIS" to "NEW YORK"
 And all flights has "BUSINESS" class
-
+```
 For a specification prespective, this should be easy to understand.
 We want to test that search of flights from Paris to New York with business class only should return the right arrival-destination with the right class.
 But from a programmation prespective, we need to tell the program what is the relation between phrases.
