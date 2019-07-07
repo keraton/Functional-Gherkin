@@ -13,7 +13,7 @@ Scenario: Search Business Flight
 Given search of a flight from "PARIS" to "NEW YORK"
 And filter with "BUSINESS" class
 When search is executed
-Then return flights from "PARIS" to "NEW YORK"
+Then search results contains flights from "PARIS" to "NEW YORK"
 And all flights has "BUSINESS" class
 ```
 
@@ -23,7 +23,22 @@ Because of this need, most likely when we write a BDD implementation we write a 
 
 ## Gherkin new instruction
 
+Gherkin in actual state are defined as statements, they doesn't support the return value. We need then to transform these statements to expressions, we need to add returning value mechanism in Gherkin language. Lets take previous example and try to transform them to expressions.
 
+### Using 'return' key words
+
+Like most of programming language we are going to introduce the return keyword to the example. We also modify the phrases to use the returning value in their arguments.
+
+```
+Scenario: Search Business Flight
+
+Given search of a flight from "PARIS" to "NEW YORK", return "SEARCH CONTEXT"
+Given existing "SEARCH CONTEXT" use "BUSINESS" class, return "SEARCH CONTEXT"
+When search with "SEARCH CONTEXT" is executed, return "FLIGHTS"
+Then "FLIGHTS" contains flights from "PARIS" to "NEW YORK" return "FLIGHTS"
+And all "FLIGHTS" has "BUSINESS" class return "FLIGHTS"
+
+```
 
 
 ## Reference
