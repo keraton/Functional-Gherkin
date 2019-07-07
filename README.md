@@ -25,7 +25,7 @@ Because of this need, most likely when we write a BDD implementation we write a 
 
 Gherkin in actual state are defined as statements, they doesn't support the return value. We need then to transform these statements to expressions, we need to add returning value mechanism in Gherkin language. Lets take previous example and try to transform them to expressions.
 
-### Using 'return' key words
+### Using 'return' keyword
 
 Like most of programming language we are going to introduce the return keyword to the example. We also modify the phrases to use the returning value in their arguments.
 
@@ -39,6 +39,10 @@ Then "FLIGHTS" contains flights from "PARIS" to "NEW YORK" return "FLIGHTS"
 And all "FLIGHTS" has "BUSINESS" class return "FLIGHTS"
 
 ```
+
+In this example we transform all Gherkin statements into expressions. Now we don't need to store information between phrases. The context is transfered using return value from the precedent phrase to argument in the next phrase. We manage then transform our statefull implementation to a stateless one. But that comes with a cost, Gherkin specifications should be written in a *spoken language*, by adding the return keyword, we lose this feature. 
+
+### Using implicit return
 
 
 ## Reference
