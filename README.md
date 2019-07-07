@@ -42,6 +42,20 @@ And all "FLIGHTS" has "BUSINESS" class return "FLIGHTS"
 
 In this example we transform all Gherkin statements into expressions. Now we don't need to store information between phrases. The context is transfered using return value from the precedent phrase to argument in the next phrase. We manage then transform our statefull implementation to a stateless one. But that comes with a cost, Gherkin specifications should be written in a *spoken language*, by adding the return keyword, we lose this feature. 
 
+A work around for this would be to separate the return in another column.
+
+```
+Scenario: Search Business Flight
+
+Given search of a flight from "PARIS" to "NEW YORK"           return "SEARCH CONTEXT"
+Given existing "SEARCH CONTEXT" use "BUSINESS" class          return "SEARCH CONTEXT"
+When search with "SEARCH CONTEXT" is executed                 return "FLIGHTS"
+Then "FLIGHTS" contains flights from "PARIS" to "NEW YORK"    return "FLIGHTS"
+And all "FLIGHTS" has "BUSINESS" class                        return "FLIGHTS"
+
+```
+This way we can separate between the usual Gherkin with the return value.
+
 ### Using implicit return
 
 Instead of using explicit return, we will define the return value implicitely. We remove the 'return' keyword in the previous example and declare them differently.
@@ -49,14 +63,35 @@ Instead of using explicit return, we will define the return value implicitely. W
 ```
 Scenario: Search Business Flight
 
-Given search of a flight from "PARIS" to "NEW YORK"
-And filter with "BUSINESS" class
-When search is executed
-Then search results contains flights from "PARIS" to "NEW YORK"
-And all flights has "BUSINESS" class
+Given "SEARCH" of a flight from "PARIS" to "NEW YORK"
+And filter "SEARCH" with "BUSINESS" class
+When run "SEARCH" to get "SEARCH RESULTS"
+Then "SEARCH RESULTS" contains flights from "PARIS" to "NEW YORK"
+And all "SEARCH RESULTS" has "BUSINESS" class
+```
+In this example we are using SEARCH and SEARCH RESULT as the returning values. We see that there is no distinction of argument and return, but technically we still can declare which of the arguments is an input argument or output argument, some of the argument are both input and output. This is called the procedural style. 
+
+The incovenient of this solution is that even this is better than the explicit return solution, some of the phrase is still ackward. This is specially true for ```When run "SEARCH" to get "SEARCH RESULTS"```. The phrase then can be less natural. Another issue with this solution is that the input and output can be confused, when the BDD has a lot of phrases, this can be a problem. Prefixing the argument can help this issue.
+
+```
+Scenario: Search Business Flight
+
+Given ">SEARCH" of a flight from "@PARIS" to "@NEW YORK"
+And filter "@>SEARCH" with "@BUSINESS" class
+When run "@SEARCH" to get ">SEARCH RESULTS"
+Then "@>SEARCH RESULTS" contains flights from "PARIS" to "NEW YORK"
+And all "@>SEARCH RESULTS" has "BUSINESS" class
 ```
 
-This is not easy
+In this example we prefix the input with @ and the output with >.
+
+### Explicit vs Implicit
+
+Both solutions has incovenient we need to work on implementation in order to see which one is better.
+
+## Technical implementation
+
+
 
 ## Reference
 1. https://cucumber.io/docs/gherkin/reference/ 
