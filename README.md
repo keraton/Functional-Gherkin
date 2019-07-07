@@ -44,6 +44,19 @@ In this example we transform all Gherkin statements into expressions. Now we don
 
 ### Using implicit return
 
+Instead of using explicit return, we will define the return value implicitely. We remove the 'return' keyword in the previous example and declare them differently.
+
+```
+Scenario: Search Business Flight
+
+Given search of a flight from "PARIS" to "NEW YORK"
+And filter with "BUSINESS" class
+When search is executed
+Then search results contains flights from "PARIS" to "NEW YORK"
+And all flights has "BUSINESS" class
+```
+
+This is not easy
 
 ## Reference
 1. https://cucumber.io/docs/gherkin/reference/ 
