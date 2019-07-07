@@ -26,7 +26,7 @@ In order to manage these relations, we don't have the choice, we need to save th
 Because of this need, most likely when we write a BDD implementation we write a statefull programation.
 And unfortunately statefull programmation is hard, hard to maintain and harder to scale.
 
-This is why a functional gherkin is interesting, with a discipline and a set of new gherkin instruction we can keep our BDD stateless, therefor easiest to maintain.
+This is why a functional gherkin is interesting, with a discipline and a set of new gherkin instruction we can keep our BDD stateless, therefor easier to maintain.
 
 
 ## Reference
