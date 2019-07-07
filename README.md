@@ -1,6 +1,6 @@
-# Functional Gherkin
+# Stateless Gherkin
 
-> Functional Gherkin is like gherkin but with the possibility to return a value 
+> Stateless Gherkin is like gherkin but with the possibility to return a value 
 
 ## Gherkin improvement
 
