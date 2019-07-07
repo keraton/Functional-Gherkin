@@ -89,9 +89,26 @@ In this example we prefix the input with @ and the output with >.
 
 Both solutions has incovenient but we see that adding return keyword break the spoken language requirement. This is a blocking issue for us. Forward we will use the implicit solution. 
 
-## Technical implementation
+## Technical specification
 
-TODO
+We try to implement as much as possible the functional style for this stateless Gherkin.
+These are the list technical specification of stateless gherkin.
+
+- All Gherkin specifications are define as expression
+- All Gherkin specifications should have a one output (An output is a object)
+- All Gherkin specifications can have input
+- All Gherkin specifications can have no input 
+- All Gherkin specifications are stateless (no more state keeping)
+- The output of n phrase can be used for all n+ phrases in the same scenario
+- A phrase can override an output argument if they are using the same name (this is where the full functional is impratical)
+- Output and input can be mutable.
+- An input can be provided in the phrase as a primitive (String, Int etc.) 
+- An input can be provided by an output of the precendent phrase
+- The limit of the scope of input and output is scenario
+
+## Java Implementation
+
+TODO 
 
 
 ## Reference
