@@ -87,10 +87,11 @@ In this example we prefix the input with @ and the output with >.
 
 ### Explicit vs Implicit
 
-Both solutions has incovenient we need to work on implementation in order to see which one is better.
+Both solutions has incovenient but we see that adding return keyword break the spoken language requirement. This is a blocking issue for us. Forward we will use the implicit solution. 
 
 ## Technical implementation
 
+TODO
 
 
 ## Reference
