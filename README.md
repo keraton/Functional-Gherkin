@@ -2,6 +2,10 @@
 
 > Stateless Gherkin is like gherkin but with the possibility to return a value 
 
+## Motivation
+
+We thought that the actual Gherkin specification can be improved by adding the possibility to have a return value in their specification. We aim to implement this with this project. Please see this README in order to understand better the improvement, solution and the technical specification. If you interested with this idea we are welcome to have you in our team :)
+
 ## Gherkin improvement
 
 A good BDD implementation should let the user to reuse and to compose of sets Gherkin instruction with ease. But in reality, this is difficult due to the statefull implementation which is *hidden* from the specification.
