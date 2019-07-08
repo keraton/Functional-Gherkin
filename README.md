@@ -93,7 +93,7 @@ In this example we prefix the input with @ and the output with >.
 
 Both solutions has incovenient but we see that adding return keyword break the spoken language requirement. This is a blocking issue for us. Forward we will use the implicit solution. 
 
-## Technical specification
+## Functional specifications
 
 We try to implement as much as possible the functional style for this stateless Gherkin.
 These are the list technical specification of stateless gherkin.
