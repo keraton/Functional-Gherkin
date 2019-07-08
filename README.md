@@ -107,7 +107,7 @@ We try to implement as much as possible the functional style for this stateless 
 - The output of *n* phrase can be used for all *n+* phrases in the same scenario
 - A specification can override an output argument if they are using the same name
 - Output and input can be mutable.
-- Input can be provided in the phrase as a primitive (String, Int etc.) 
+- Input can be provided in the phrase as a primitive (String, Number, Boolean) and Enum.
 - Input can be provided by an output of the preceding specification
 - The scope of input and output is scenario
 - Passing value between phrases is done by the implementer framework
