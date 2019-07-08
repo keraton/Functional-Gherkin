@@ -97,7 +97,7 @@ Both solutions have inconvenient, but we see that adding return keyword break th
 
 ## Functional specifications
 
-We try to implement as much as possible the functional style for this stateless Gherkin. These are the list of functional specifications of stateless gherkin.
+We try to implement as much as possible the functional style for this stateless Gherkin. These are the list of functional specifications of stateless gherkin. Note: Specification ~ 1 phrase
 
 - Specification is defined as expression
 - Specification should have one output
