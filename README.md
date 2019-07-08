@@ -4,7 +4,7 @@
 
 ## Motivation
 
-We thought that the actual Gherkin specification can be improved by adding the possibility to have a return value in their specification. We aim to implement this with this project. Please see this README in order to understand better the improvement, solution and the technical specification. If you interested with this idea we are welcome to have you in our team :)
+We thought that the actual Gherkin specification can be improved by adding the possibility to have a return value in their specification. Please see this README in order to understand better the improvement, solution and the technical specification. We are open to any commets, suggestion, review and critics, you can subscribe as an issue.
 
 ## Gherkin improvement
 
