@@ -109,6 +109,7 @@ These are the list technical specification of stateless gherkin.
 - An input can be provided in the phrase as a primitive (String, Int etc.) 
 - An input can be provided by an output of the precendent phrase
 - The limit of the scope of input and output is scenario
+- Passing value between phrases is done by the framework
 
 ## Java Implementation
 
