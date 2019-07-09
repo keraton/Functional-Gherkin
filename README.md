@@ -111,6 +111,7 @@ We try to implement as much as possible the functional style for this stateless 
 - Input can be provided by an output of the preceding specification
 - The scope of input and output is scenario
 - Passing value between phrases is done by the implementer framework
+- Assume that the last specification is successfull before run the specification
 
 
 ## Reference
