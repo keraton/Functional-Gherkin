@@ -1,4 +1,4 @@
-# Stateless Gherkin RFC
+# Stateless BDD RFC
 
 > Stateless Gherkin is like gherkin, but with the possibility to return a value 
 
